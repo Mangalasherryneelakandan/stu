@@ -17,12 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from stuuu.views import main, success, register_student, student_detail, student_list, admin_login
+from stuuu.views import success, register_student, student_detail, student_list, admin_login
 
 urlpatterns = [
     path('', register_student, name='register'),
     path('admin/', admin.site.urls),
-    path('main/',main,name='main'),
     path('register/', register_student, name='register'),
     path('success/', success, name='success'),
     path('student/<int:pk>/', student_detail, name='student_detail'),
